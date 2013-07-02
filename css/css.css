@@ -1,0 +1,26 @@
+::-webkit-input-placeholder  { font-style: italic; }
+body {
+	margin: 0 auto;
+	max-width: 500px;
+    min-width: 250px;
+}
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+a {
+	color: #36C;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+#loading-indicator {
+	position: absolute;
+	z-index: 9999;
+}
+header, section, footer {
+	width: 95%;
+	margin: 0 auto;
+}
