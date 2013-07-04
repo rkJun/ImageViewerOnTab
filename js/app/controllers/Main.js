@@ -4,39 +4,31 @@
  * Time: 오후 5:26
  */
 tipJS.controller({
-  name : "chromeEx.Main",
-  beforeInvoke: function(params) {
-  },
-  invoke: function(params) {
+  name : "ImagesOnCurrenrPage.Main",
+
+  invoke: function() {
+
     var self = this;
-    var d = $.ajax({
-      url: "http://search.daum.net/search?w=tot&q=%EC%98%A4%EB%8A%98%EB%82%A0%EC%94%A8"
-    });
-    var n = $.ajax({
-      url: "http://search.naver.com/search.naver?query=%EC%98%A4%EB%8A%98%EB%82%A0%EC%94%A8"
-    });
 
-    d.done(function(data) {
-      var weatherArea = $(data).find("#weatherColl");
-      console.log("???");
-      self.renderTemplate({
-        url: "js/app/tpl/timeline.html",
-        renderTo: "content-wrapper",
-        data: {
-          title: "Daum",
-          content: weatherArea
-        }
-      })
+    var imageModel = self.loadModel("Images", true);
+    var renderer = self.loadView("Renderer");
+
+    imageModel.load();
+    renderer.render(imageModel);
+
+    self.bindEvent(renderer);
+  },
+
+  // @TODO: 이미지 상세정보 보여주기
+  onImageClick: function(e) {
+    console.log(e.target);
+  },
+
+  bindEvent: function(view) {
+    var self = this;
+    view.getImgElements().on("click", function(e) {
+      self.onImageClick.call(e.target, e);
     });
-
-    //    n.done(function(data) {
-    //      var weatherArea = $(data).find("#content .content_search");
-    //      $("body").append(weatherArea);
-    //    });
-    /*
-     this.renderTemplate({
-
-     });
-     */
   }
+
 });

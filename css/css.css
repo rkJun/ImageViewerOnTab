@@ -1,8 +1,9 @@
 ::-webkit-input-placeholder  { font-style: italic; }
 body {
 	margin: 0 auto;
-	max-width: 500px;
-    min-width: 250px;
+	max-width: 800px;
+    min-width: 420px;
+    padding: 5px;
 }
 ul {
 	list-style: none;
@@ -23,4 +24,25 @@ a:hover {
 header, section, footer {
 	width: 95%;
 	margin: 0 auto;
+}
+ul {
+    list-style: none;
+}
+img {
+    display: inline-block;
+    border: none;
+    max-width: 400px;
+}
+#content-wrapper {
+    margin: 0 auto;
+    border: solid 1px gainsboro;
+    padding: 5px;
+}
+#content-wrapper h1 {
+    font-size: 20px;
+    border-bottom: solid 1px #ccc;
+}
+.empty-text {
+    text-align: center;
+    font-weight: bold;
 }

@@ -8,15 +8,14 @@ tipJS.define({
   noCacheVersion: "0.10.0",
   noCacheParam: "tipJS",
   noCacheAuto: true,
-  name: "chromeEx",
+  name: "ImagesOnCurrenrPage",
   controllers:[
     "Main.js"
   ],
   models:[
-    "DaumWeather.js",
-    "NaverWeather.js"
+    "Images.js"
   ],
   views:[
-    "Fill.js"
+    "Renderer.js"
   ]
 });
