@@ -1,4 +1,2 @@
-chrome-wheather
+Image Viewer on current tab
 ===============
-
-ChromeWheather
